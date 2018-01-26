@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
-    <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
@@ -11,9 +10,18 @@
         <version>2.21</version>
     </parent>
 
+    <modelVersion>4.0.0</modelVersion>
+
     <groupId>uk.co.leafdevelopment</groupId>
     <artifactId>jenkins-sl-poc</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <repositories>
+        <repository>
+            <id>repo.jenkins-ci.org</id>
+            <url>https://repo.jenkins-ci.org/public/</url>
+        </repository>
+    </repositories>
 
     <pluginRepositories>
         <pluginRepository>
@@ -68,6 +76,7 @@
             <scope>test</scope>
         </dependency>
 
+        <!--LesFurets Jenkins Pipeline Unit testing framework: https://github.com/lesfurets/JenkinsPipelineUnit-->
         <dependency>
             <groupId>com.lesfurets</groupId>
             <artifactId>jenkins-pipeline-unit</artifactId>
